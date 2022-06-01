@@ -11,9 +11,11 @@ const api: AxiosInstance = axios.create({
 });
 
 export async function apiGetAccountAssets(address: string, chainId: number): Promise<IAssetData[]> {
-  const response = await api.get(`/account-assets?address=${address}&chainId=${chainId}`);
-  const { result } = response.data;
-  return result;
+  // const response = await api.get(`/account-assets?address=${address}&chainId=${chainId}`);
+  // const { result } = response.data;
+  // return result;
+
+  return [];
 }
 
 export async function apiGetAccountTransactions(
@@ -26,9 +28,10 @@ export async function apiGetAccountTransactions(
 }
 
 export const apiGetAccountNonce = async (address: string, chainId: number): Promise<string> => {
-  const response = await api.get(`/account-nonce?address=${address}&chainId=${chainId}`);
-  const { result } = response.data;
-  return result;
+  // const response = await api.get(`/account-nonce?address=${address}&chainId=${chainId}`);
+  // const { result } = response.data;
+  // return result;
+  return "0";
 };
 
 export const apiGetGasPrices = async (): Promise<IGasPrices> => {
